@@ -10,8 +10,17 @@
     "added": "2026-11-08",
     "note": "根据自动字幕整理，视频录于《沙丘 2》上映前夕（2024 年初），主要参考 Ryan Britt 的《The Spice Must Flow》（2023）。字幕专名按原著校正：Bene Gesserit、Arrakis、Harkonnen、Atreides、Leto、Kwisatz Haderach、gom jabbar、Fremen、Lisan al-Gaib、Muad'Dib、Chani、Alia、Feyd-Rautha、Irulan、Liet-Kynes、Tleilaxu、Jodorowsky、Villeneuve、Sterling Lanier。年份补正：《沙丘》1963–65 年在 Analog 连载、1965 年成书；《沙丘救世主》1969 年；《沙丘之子》1976 年。字幕说 Messiah 的冷遇在 1965 年，有误。书中引文均为转述。"
   },
-  "category": "科幻与文学",
-  "tags": ["科幻", "Frank Herbert", "生态", "宗教", "权力", "反英雄", "AI", "流行文化"],
+  "category": "幻想与文学",
+  "tags": [
+    "科幻",
+    "Frank Herbert",
+    "生态",
+    "宗教",
+    "权力",
+    "反英雄",
+    "AI",
+    "流行文化"
+  ],
   "tldr": "《沙丘》表面是一个 15 岁「超人」少年的救世冒险，骨子里是对救世主神话的拆解：英雄被预言、被宗教、被生态和政治共同制造出来，而他越看得清未来，越逃不出那只笼子。它靠的不是主题先行——编辑最先爱上的是人物——而是一部小说慢慢渗进几代人的生活。它今天更显重要：反对「思考机器」、警惕魅力领袖、把一切看作相互牵连的生态。",
   "golden_lines": [
     "Fear is the mind-killer.",
@@ -209,15 +218,85 @@
     }
   ],
   "concepts": [
-    {"name": "巴特勒圣战", "en": "Butlerian Jihad", "who": "Frank Herbert《沙丘》", "year": "1965", "field": "文学设定", "gist": "人类消灭一切模仿人类心智的机器，转而发展人自身的能力。"},
-    {"name": "Kwisatz Haderach", "en": "Kwisatz Haderach", "who": "Frank Herbert《沙丘》", "year": "1965", "field": "文学设定", "gist": "Bene Gesserit 育种计划想造出的男性超人，能看见过去与未来。"},
-    {"name": "Missionaria Protectiva", "en": "Missionaria Protectiva", "who": "Frank Herbert《沙丘》", "year": "1965", "field": "文学设定", "gist": "提前几百年在各星球播种宗教预言，以备日后利用。"},
-    {"name": "戈姆刺测试", "en": "Gom Jabbar", "who": "Frank Herbert《沙丘》", "year": "1965", "field": "文学设定", "gist": "用剧痛筛选「人」：能否用意志压过动物本能。"},
-    {"name": "超级英雄有害论", "en": "Superheroes are disastrous", "who": "Frank Herbert", "year": "—", "field": "政治哲学", "gist": "英雄周围的权力结构终会落入凡人之手，错误被放大到巨大尺度。"},
-    {"name": "生态即理解后果", "en": "Ecology as understanding consequences", "who": "Frank Herbert", "year": "—", "field": "生态学", "gist": "心理、宗教、经济也各是生态，彼此牵连，做决定前要评估所有后果。"},
-    {"name": "新浪潮科幻", "en": "New Wave science fiction", "who": "Ballard、Le Guin、Russ、Disch 等", "year": "1960–70s", "field": "文学史", "gist": "转向内在空间，拆解超人与冒险套路，用科幻做社会评论。"},
-    {"name": "黄金时代科幻与 Campbell", "en": "Golden Age SF / John W. Campbell", "who": "John W. Campbell（Analog 主编）", "year": "1937–71", "field": "文学史", "gist": "偏爱超人主角与科技冒险，塑造了 Asimov、Heinlein 一代。"},
-    {"name": "科幻的定义", "en": "Definition of science fiction", "who": "Isaac Asimov", "year": "—", "field": "文学史", "gist": "科幻是处理人类对科学技术变化之反应的文学分支。"},
-    {"name": "《The Spice Must Flow》", "en": "The Spice Must Flow", "who": "Ryan Britt", "year": "2023", "field": "流行文化", "gist": "《沙丘》在流行文化中传播与演变的历史。"}
+    {
+      "name": "巴特勒圣战",
+      "en": "Butlerian Jihad",
+      "who": "Frank Herbert《沙丘》",
+      "year": "1965",
+      "field": "文学设定",
+      "gist": "人类消灭一切模仿人类心智的机器，转而发展人自身的能力。"
+    },
+    {
+      "name": "Kwisatz Haderach",
+      "en": "Kwisatz Haderach",
+      "who": "Frank Herbert《沙丘》",
+      "year": "1965",
+      "field": "文学设定",
+      "gist": "Bene Gesserit 育种计划想造出的男性超人，能看见过去与未来。"
+    },
+    {
+      "name": "Missionaria Protectiva",
+      "en": "Missionaria Protectiva",
+      "who": "Frank Herbert《沙丘》",
+      "year": "1965",
+      "field": "文学设定",
+      "gist": "提前几百年在各星球播种宗教预言，以备日后利用。"
+    },
+    {
+      "name": "戈姆刺测试",
+      "en": "Gom Jabbar",
+      "who": "Frank Herbert《沙丘》",
+      "year": "1965",
+      "field": "文学设定",
+      "gist": "用剧痛筛选「人」：能否用意志压过动物本能。"
+    },
+    {
+      "name": "超级英雄有害论",
+      "en": "Superheroes are disastrous",
+      "who": "Frank Herbert",
+      "year": "—",
+      "field": "政治哲学",
+      "gist": "英雄周围的权力结构终会落入凡人之手，错误被放大到巨大尺度。"
+    },
+    {
+      "name": "生态即理解后果",
+      "en": "Ecology as understanding consequences",
+      "who": "Frank Herbert",
+      "year": "—",
+      "field": "生态学",
+      "gist": "心理、宗教、经济也各是生态，彼此牵连，做决定前要评估所有后果。"
+    },
+    {
+      "name": "新浪潮科幻",
+      "en": "New Wave science fiction",
+      "who": "Ballard、Le Guin、Russ、Disch 等",
+      "year": "1960–70s",
+      "field": "文学史",
+      "gist": "转向内在空间，拆解超人与冒险套路，用科幻做社会评论。"
+    },
+    {
+      "name": "黄金时代科幻与 Campbell",
+      "en": "Golden Age SF / John W. Campbell",
+      "who": "John W. Campbell（Analog 主编）",
+      "year": "1937–71",
+      "field": "文学史",
+      "gist": "偏爱超人主角与科技冒险，塑造了 Asimov、Heinlein 一代。"
+    },
+    {
+      "name": "科幻的定义",
+      "en": "Definition of science fiction",
+      "who": "Isaac Asimov",
+      "year": "—",
+      "field": "文学史",
+      "gist": "科幻是处理人类对科学技术变化之反应的文学分支。"
+    },
+    {
+      "name": "《The Spice Must Flow》",
+      "en": "The Spice Must Flow",
+      "who": "Ryan Britt",
+      "year": "2023",
+      "field": "流行文化",
+      "gist": "《沙丘》在流行文化中传播与演变的历史。"
+    }
   ]
 }

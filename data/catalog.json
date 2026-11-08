@@ -1,7 +1,27 @@
 {
-  "version": 3,
+  "version": 4,
   "updated": "2026-11-08",
   "entries": [
+    {
+      "id": "tolkien-spiders",
+      "file": "data/entries/tolkien-spiders.json",
+      "title": "The Philosophy of Tolkien's Spiders",
+      "title_zh": "托尔金的蜘蛛哲学：只吞噬、不创造的「反造物者」",
+      "source_type": "视频",
+      "author": "Jess of the Shire",
+      "added": "2026-11-08",
+      "category": "幻想与文学",
+      "tags": [
+        "托尔金",
+        "魔戒",
+        "怪物",
+        "神话",
+        "女性",
+        "造物",
+        "恶的类型"
+      ],
+      "summary": "在人人渴望创造的世界里，巨蛛是只吞噬、不产出的「反造物者」；与 Sauron、Galadriel、格伦德尔之母的多重对照。"
+    },
     {
       "id": "why-we-love-dune",
       "file": "data/entries/why-we-love-dune.json",
@@ -10,7 +30,7 @@
       "source_type": "视频",
       "author": "Jess of the Shire",
       "added": "2026-11-08",
-      "category": "科幻与文学",
+      "category": "幻想与文学",
       "tags": [
         "科幻",
         "Frank Herbert",
@@ -31,7 +51,7 @@
       "source_type": "视频",
       "author": "Jess of the Shire",
       "added": "2026-11-08",
-      "category": "科幻与文学",
+      "category": "幻想与文学",
       "tags": [
         "科幻",
         "荒诞",
