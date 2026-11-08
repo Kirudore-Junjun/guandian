@@ -1,7 +1,27 @@
 {
-  "version": 5,
+  "version": 6,
   "updated": "2026-11-08",
   "entries": [
+    {
+      "id": "cowboy-bebop-tragedy",
+      "file": "data/entries/cowboy-bebop-tragedy.json",
+      "title": "The Bittersweet Tragedy Of Cowboy Bebop",
+      "title_zh": "《星际牛仔》的苦甜悲剧：被过去冻住的人，如何让时间重新走动",
+      "source_type": "视频",
+      "author": "动画分析频道",
+      "added": "2026-11-08",
+      "category": "影视与动画",
+      "tags": [
+        "星际牛仔",
+        "动画",
+        "渡边信一郎",
+        "过去与创伤",
+        "停滞",
+        "爵士",
+        "菅野洋子"
+      ],
+      "summary": "每个主角都被冻在过去的某一刻；直面过去才能让时间重新走动，但解脱是有代价的。"
+    },
     {
       "id": "voynich-manuscript",
       "file": "data/entries/voynich-manuscript.json",
