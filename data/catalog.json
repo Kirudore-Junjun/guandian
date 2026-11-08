@@ -1,7 +1,27 @@
 {
-  "version": 4,
+  "version": 5,
   "updated": "2026-11-08",
   "entries": [
+    {
+      "id": "voynich-manuscript",
+      "file": "data/entries/voynich-manuscript.json",
+      "title": "The Mysteries of the Voynich Manuscript",
+      "title_zh": "伏尼契手稿之谜：一本没人读得懂的书，照出的是人类自己",
+      "source_type": "视频",
+      "author": "Jess of the Shire",
+      "added": "2026-11-08",
+      "category": "历史与谜题",
+      "tags": [
+        "伏尼契手稿",
+        "密码学",
+        "语言",
+        "人造语言",
+        "伪造",
+        "历史方法",
+        "创造力"
+      ],
+      "summary": "一本四百年无人读懂的 15 世纪手稿：破译者的失败史、三条判断标准，以及「看起来有意义」与「有意义」的距离。"
+    },
     {
       "id": "tolkien-spiders",
       "file": "data/entries/tolkien-spiders.json",
