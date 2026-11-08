@@ -1,7 +1,27 @@
 {
-  "version": 6,
+  "version": 7,
   "updated": "2026-11-08",
   "entries": [
+    {
+      "id": "divine-machinery",
+      "file": "data/entries/divine-machinery.json",
+      "title": "Analyzing Divine Machinery as an \"Art Movement\"",
+      "title_zh": "「神圣机械」：一种网络美学，为什么人们会在电路板里找神",
+      "source_type": "视频",
+      "author": "网络美学分析",
+      "added": "2026-11-08",
+      "category": "艺术与网络文化",
+      "tags": [
+        "神圣机械",
+        "网络美学",
+        "科技与宗教",
+        "白南准",
+        "Lain",
+        "泛灵论",
+        "数字崇高"
+      ],
+      "summary": "电路板上的十字架、可以下载的神、看着自己的电视佛：一种网络美学如何映照数字时代的崇拜、焦虑与解离。"
+    },
     {
       "id": "cowboy-bebop-tragedy",
       "file": "data/entries/cowboy-bebop-tragedy.json",
