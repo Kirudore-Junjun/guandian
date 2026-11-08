@@ -1,7 +1,27 @@
 {
-  "version": 1,
+  "version": 2,
   "updated": "2026-11-08",
   "entries": [
+    {
+      "id": "hitchhikers-guide-explained",
+      "file": "data/entries/hitchhikers-guide-explained.json",
+      "title": "The Hitchhiker's Guide to the Galaxy Explained",
+      "title_zh": "《银河系漫游指南》五部曲讲解：荒诞宇宙里的人生观",
+      "source_type": "视频",
+      "author": "Jess",
+      "added": "2026-11-08",
+      "category": "文学与幽默",
+      "tags": [
+        "科幻",
+        "荒诞",
+        "幽默写作",
+        "Douglas Adams",
+        "哲学",
+        "讽刺",
+        "AI"
+      ],
+      "summary": "把荒诞当真、一本正经地推到底：42、别慌、三明治师傅——Adams 在玩笑里装的是严肃的人生观。"
+    },
     {
       "id": "vibecoding-platos-cave",
       "file": "data/entries/vibecoding-platos-cave.json",
@@ -11,7 +31,15 @@
       "author": "Red Means Recording",
       "added": "2026-11-08",
       "category": "AI 与创作",
-      "tags": ["AI", "音乐科技", "Vibe Coding", "哲学", "认知心理学", "消费主义", "作者身份"],
+      "tags": [
+        "AI",
+        "音乐科技",
+        "Vibe Coding",
+        "哲学",
+        "认知心理学",
+        "消费主义",
+        "作者身份"
+      ],
       "summary": "用 AI 做插件和固件，给人的是创造的快感而非创造的能力；它的结构更像消费而不是生产。"
     }
   ]

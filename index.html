@@ -164,7 +164,7 @@ function setNav(v){document.querySelectorAll('nav.bn a').forEach(a=>a.classList.
 
 function home(){
   setNav('home');
-  const es=[...S.catalog.entries].sort((a,b)=>b.added.localeCompare(a.added));
+  const es=[...S.catalog.entries].map((e,i)=>[e,i]).sort((a,b)=>b[0].added.localeCompare(a[0].added)||a[1]-b[1]).map(x=>x[0]);
   const cats=['全部',...new Set(es.map(e=>e.category))];
   const tags=[...new Set(es.flatMap(e=>e.tags))];
   const read=store.get('read',{});
