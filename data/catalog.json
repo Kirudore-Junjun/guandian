@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "updated": "2026-11-08",
+  "entries": [
+    {
+      "id": "vibecoding-platos-cave",
+      "file": "data/entries/vibecoding-platos-cave.json",
+      "title": "Vibecoding in Plato's Cave",
+      "title_zh": "洞穴里的 Vibe Coding：AI、音乐科技与《星际迷航》",
+      "source_type": "视频",
+      "author": "Red Means Recording",
+      "added": "2026-11-08",
+      "category": "AI 与创作",
+      "tags": ["AI", "音乐科技", "Vibe Coding", "哲学", "认知心理学", "消费主义", "作者身份"],
+      "summary": "用 AI 做插件和固件，给人的是创造的快感而非创造的能力；它的结构更像消费而不是生产。"
+    }
+  ]
+}
