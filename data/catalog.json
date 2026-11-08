@@ -1,16 +1,37 @@
 {
-  "version": 2,
+  "version": 3,
   "updated": "2026-11-08",
   "entries": [
+    {
+      "id": "why-we-love-dune",
+      "file": "data/entries/why-we-love-dune.json",
+      "title": "Why Do We Love DUNE?",
+      "title_zh": "我们为什么爱《沙丘》：一个反英雄神话如何渗进流行文化",
+      "source_type": "视频",
+      "author": "Jess of the Shire",
+      "added": "2026-11-08",
+      "category": "科幻与文学",
+      "tags": [
+        "科幻",
+        "Frank Herbert",
+        "生态",
+        "宗教",
+        "权力",
+        "反英雄",
+        "AI",
+        "流行文化"
+      ],
+      "summary": "表面是 15 岁超人的救世冒险，骨子里是对救世主神话的拆解；生态、宗教、权力与一部小说的慢渗透史。"
+    },
     {
       "id": "hitchhikers-guide-explained",
       "file": "data/entries/hitchhikers-guide-explained.json",
       "title": "The Hitchhiker's Guide to the Galaxy Explained",
       "title_zh": "《银河系漫游指南》五部曲讲解：荒诞宇宙里的人生观",
       "source_type": "视频",
-      "author": "Jess",
+      "author": "Jess of the Shire",
       "added": "2026-11-08",
-      "category": "文学与幽默",
+      "category": "科幻与文学",
       "tags": [
         "科幻",
         "荒诞",

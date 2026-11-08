@@ -5,13 +5,21 @@
   "source": {
     "type": "视频",
     "author": "Jess",
-    "channel": "Jess（讲《指环王》与讲故事艺术的 YouTube 频道）",
+    "channel": "Jess of the Shire",
     "url": "https://www.youtube.com/watch?v=9-1oxSGwRW8",
     "added": "2026-11-08",
     "note": "根据自动字幕整理。视频把 Douglas Adams 的五部小说逐本复述，每本配一杯书中出现的酒。字幕里的专名多有听写错误，本手册按原著拼写校正：Krikkit（字幕作 Cricket）、Wikkit Gate、Zarniwoop、Trin Tragula、Hactar、Agrajag、Stavromula Beta、Algolian Suntiger（字幕作 Angolian）、Arcturan Mega-gin、Silastic Armorfiends of Striterax。第三部原本是 Adams 给《神秘博士》写的剧本构想（Doctor Who and the Krikkitmen）。第六部 And Another Thing（2009）由 Eoin Colfer 根据设定续写，视频未计入。书中引文均为转述，不是原文。"
   },
-  "category": "文学与幽默",
-  "tags": ["科幻", "荒诞", "幽默写作", "Douglas Adams", "哲学", "讽刺", "AI"],
+  "category": "科幻与文学",
+  "tags": [
+    "科幻",
+    "荒诞",
+    "幽默写作",
+    "Douglas Adams",
+    "哲学",
+    "讽刺",
+    "AI"
+  ],
   "tldr": "Adams 用一套「把荒诞当真、一本正经地推到底」的写法，讲的其实是很严肃的东西：宇宙不在乎你，答案没意义，除非你先知道问题；官僚、权力、意义感都经不起放大镜。他给出的不是答案，而是姿态——别慌，带好毛巾，把小事做好（比如做三明治），对自己的渺小保持幽默而不是保持比例感。",
   "golden_lines": [
     "Don't Panic.",
@@ -199,15 +207,85 @@
     }
   ],
   "concepts": [
-    {"name": "42 与终极问题", "en": "The Answer to the Ultimate Question", "who": "Douglas Adams", "year": "1978", "field": "文学设定", "gist": "超级电脑算出了答案，但没人知道问题是什么。"},
-    {"name": "改进概率驱动", "en": "Infinite Improbability Drive", "who": "Douglas Adams", "year": "1978", "field": "文学设定", "gist": "利用极不可能的事件在宇宙中穿行，副作用是各种不可能的事发生。"},
-    {"name": "真实人格", "en": "Genuine People Personalities", "who": "Douglas Adams", "year": "1978", "field": "文学设定", "gist": "给机器装上真实人格，结果造出了抑郁的 Marvin。"},
-    {"name": "全景透视漩涡", "en": "Total Perspective Vortex", "who": "Douglas Adams", "year": "1980", "field": "文学设定", "gist": "让你看见宇宙全貌与自己的渺小，是最残酷的精神酷刑。"},
-    {"name": "别人的问题力场", "en": "Somebody Else's Problem field", "who": "Douglas Adams", "year": "1982", "field": "文学设定", "gist": "大脑会自动忽略「不是我的问题」的东西，哪怕它就在眼前。"},
-    {"name": "Bistromath", "en": "Bistromathics", "who": "Douglas Adams", "year": "1982", "field": "文学设定", "gist": "餐厅账单上的数字处于现实与非现实的交界，可以驱动飞船。"},
-    {"name": "B 方舟", "en": "Golgafrinchan Ark Fleet Ship B", "who": "Douglas Adams", "year": "1980", "field": "文学设定", "gist": "把「中间人」先送走的殖民计划；讽刺无用岗位与精英叙事。"},
-    {"name": "占星石墨粉论", "en": "Astrology as graphite dust", "who": "Douglas Adams《基本无害》", "year": "1992", "field": "文学设定", "gist": "任意的规则体系能显出关于人的真实，就像石墨粉显出纸上的压痕。"},
-    {"name": "反高潮", "en": "Bathos", "who": "修辞学", "year": "—", "field": "修辞", "gist": "从崇高突然跌落到琐碎，制造幽默或讽刺。"},
-    {"name": "荒诞主义", "en": "Absurdism", "who": "Camus 等", "year": "20 世纪", "field": "哲学", "gist": "人对意义的渴望与宇宙的沉默之间的冲突；Adams 把它写成了喜剧。"}
+    {
+      "name": "42 与终极问题",
+      "en": "The Answer to the Ultimate Question",
+      "who": "Douglas Adams",
+      "year": "1978",
+      "field": "文学设定",
+      "gist": "超级电脑算出了答案，但没人知道问题是什么。"
+    },
+    {
+      "name": "改进概率驱动",
+      "en": "Infinite Improbability Drive",
+      "who": "Douglas Adams",
+      "year": "1978",
+      "field": "文学设定",
+      "gist": "利用极不可能的事件在宇宙中穿行，副作用是各种不可能的事发生。"
+    },
+    {
+      "name": "真实人格",
+      "en": "Genuine People Personalities",
+      "who": "Douglas Adams",
+      "year": "1978",
+      "field": "文学设定",
+      "gist": "给机器装上真实人格，结果造出了抑郁的 Marvin。"
+    },
+    {
+      "name": "全景透视漩涡",
+      "en": "Total Perspective Vortex",
+      "who": "Douglas Adams",
+      "year": "1980",
+      "field": "文学设定",
+      "gist": "让你看见宇宙全貌与自己的渺小，是最残酷的精神酷刑。"
+    },
+    {
+      "name": "别人的问题力场",
+      "en": "Somebody Else's Problem field",
+      "who": "Douglas Adams",
+      "year": "1982",
+      "field": "文学设定",
+      "gist": "大脑会自动忽略「不是我的问题」的东西，哪怕它就在眼前。"
+    },
+    {
+      "name": "Bistromath",
+      "en": "Bistromathics",
+      "who": "Douglas Adams",
+      "year": "1982",
+      "field": "文学设定",
+      "gist": "餐厅账单上的数字处于现实与非现实的交界，可以驱动飞船。"
+    },
+    {
+      "name": "B 方舟",
+      "en": "Golgafrinchan Ark Fleet Ship B",
+      "who": "Douglas Adams",
+      "year": "1980",
+      "field": "文学设定",
+      "gist": "把「中间人」先送走的殖民计划；讽刺无用岗位与精英叙事。"
+    },
+    {
+      "name": "占星石墨粉论",
+      "en": "Astrology as graphite dust",
+      "who": "Douglas Adams《基本无害》",
+      "year": "1992",
+      "field": "文学设定",
+      "gist": "任意的规则体系能显出关于人的真实，就像石墨粉显出纸上的压痕。"
+    },
+    {
+      "name": "反高潮",
+      "en": "Bathos",
+      "who": "修辞学",
+      "year": "—",
+      "field": "修辞",
+      "gist": "从崇高突然跌落到琐碎，制造幽默或讽刺。"
+    },
+    {
+      "name": "荒诞主义",
+      "en": "Absurdism",
+      "who": "Camus 等",
+      "year": "20 世纪",
+      "field": "哲学",
+      "gist": "人对意义的渴望与宇宙的沉默之间的冲突；Adams 把它写成了喜剧。"
+    }
   ]
 }
