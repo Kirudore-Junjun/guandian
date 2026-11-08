@@ -2,7 +2,7 @@
    App shell: cache first (bump VERSION to ship a new shell).
    data/*: network first, falling back to cache, so new guides show up when online
    and everything already opened still works offline. */
-const VERSION = 'guandian-v2';
+const VERSION = 'guandian-v3';
 const SHELL = ['./', 'index.html', 'manifest.webmanifest',
   'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png', 'data/catalog.json'];
 
