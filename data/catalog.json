@@ -1,7 +1,28 @@
 {
-  "version": 7,
-  "updated": "2026-11-08",
+  "version": 8,
+  "updated": "2026-11-10",
   "entries": [
+    {
+      "id": "liminal-ambient",
+      "file": "data/entries/liminal-ambient.json",
+      "title": "Liminal Ambient: Gen Z's Answer to LoFi",
+      "title_zh": "阈限氛围乐：Z 世代版的 Lo-Fi，以及一个流派如何被算法冻住",
+      "source_type": "视频",
+      "author": "音乐文化视频",
+      "added": "2026-11-10",
+      "category": "音乐与声音",
+      "tags": [
+        "阈限氛围",
+        "Ambient",
+        "Lo-Fi",
+        "后室",
+        "播放列表文化",
+        "算法",
+        "怀旧",
+        "Z 世代"
+      ],
+      "summary": "一种只为捕捉「处在中间」感的微流派：slowed + reverb、后室、《Snowfall》，以及播放列表反馈环如何把它冻成公式。"
+    },
     {
       "id": "divine-machinery",
       "file": "data/entries/divine-machinery.json",
