@@ -1,7 +1,28 @@
 {
-  "version": 11,
+  "version": 12,
   "updated": "2026-11-13",
   "entries": [
+    {
+      "id": "musk-ron-baron",
+      "file": "data/entries/musk-ron-baron.json",
+      "title": "Elon Musk Just Predicted the Next 3 Years (Ron Baron Full Interview)",
+      "title_zh": "Ron Baron 对话马斯克：迭代速度、「何塞梗」与太空数据中心",
+      "source_type": "视频访谈",
+      "author": "Ron Baron",
+      "added": "2026-11-13",
+      "category": "科技与社会",
+      "tags": [
+        "马斯克",
+        "芯片",
+        "数据中心",
+        "太空",
+        "Starship",
+        "迭代",
+        "第一性原理",
+        "访谈"
+      ],
+      "summary": "进步 = 迭代次数 × 每次进步；何塞梗；预测不是承诺；Terafab、太空数据中心与「筷子」接火箭。"
+    },
     {
       "id": "musk-isaacson-builders",
       "file": "data/entries/musk-isaacson-builders.json",
