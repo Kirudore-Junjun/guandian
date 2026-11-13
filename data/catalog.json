@@ -1,7 +1,27 @@
 {
-  "version": 16,
+  "version": 17,
   "updated": "2026-11-13",
   "entries": [
+    {
+      "id": "great-dialogue-studiobinder",
+      "file": "data/entries/great-dialogue-studiobinder.json",
+      "title": "How to Write Great Dialogue — Making Conversations Sound Real",
+      "title_zh": "怎样写出好对白（StudioBinder）：声音、信息、冲突、潜台词与节奏",
+      "source_type": "视频",
+      "author": "StudioBinder",
+      "added": "2026-11-13",
+      "category": "影视与动画",
+      "tags": [
+        "编剧",
+        "对白",
+        "人物声音",
+        "潜台词",
+        "节奏",
+        "说明性台词",
+        "冲突"
+      ],
+      "summary": "对白的五个支柱：遮名也能认出的声音、借新来者交代信息、别让对白干结构的活、观点与目标的冲突、潜台词与节奏。"
+    },
     {
       "id": "dialogue-that-doesnt-suck",
       "file": "data/entries/dialogue-that-doesnt-suck.json",
