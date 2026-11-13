@@ -1,7 +1,28 @@
 {
-  "version": 10,
+  "version": 11,
   "updated": "2026-11-13",
   "entries": [
+    {
+      "id": "musk-isaacson-builders",
+      "file": "data/entries/musk-isaacson-builders.json",
+      "title": "Elon Musk: The End of Work, the Death of Money, and a World Run by AI",
+      "title_zh": "Walter Isaacson 对话马斯克：「现实是一个反讽最大化器」",
+      "source_type": "视频访谈",
+      "author": "Walter Isaacson",
+      "added": "2026-11-13",
+      "category": "科技与社会",
+      "tags": [
+        "AI",
+        "马斯克",
+        "AI 安全",
+        "模拟理论",
+        "富足经济",
+        "反讽",
+        "访谈",
+        "叙事"
+      ],
+      "summary": "反讽最大化器、不要强迫 AI 撒谎、别无聊、海豚没有手、货币按瓦特计量，以及「多写一些可实现的好未来」。"
+    },
     {
       "id": "altman-tucker-interview",
       "file": "data/entries/altman-tucker-interview.json",
