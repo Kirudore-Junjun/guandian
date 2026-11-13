@@ -1,7 +1,28 @@
 {
-  "version": 12,
+  "version": 13,
   "updated": "2026-11-13",
   "entries": [
+    {
+      "id": "socialism-explained",
+      "file": "data/entries/socialism-explained.json",
+      "title": "SOCIALISM: An In-Depth Explanation",
+      "title_zh": "社会主义是什么：一部从圣西门到民主社会主义的思想史",
+      "source_type": "视频",
+      "author": "政治思想讲解",
+      "added": "2026-11-13",
+      "category": "政治与思想",
+      "tags": [
+        "社会主义",
+        "马克思",
+        "思想史",
+        "政治哲学",
+        "黑格尔",
+        "民主社会主义",
+        "列宁",
+        "自由主义"
+      ],
+      "summary": "不选边的社会主义思想史：从圣西门、巴贝夫、马克思到伯恩施坦、列宁与民主社会主义；平等主义是动机，集体主义是手段。"
+    },
     {
       "id": "musk-ron-baron",
       "file": "data/entries/musk-ron-baron.json",
