@@ -1,7 +1,26 @@
 {
-  "version": 14,
+  "version": 15,
   "updated": "2026-11-13",
   "entries": [
+    {
+      "id": "anatomy-of-a-screenplay",
+      "file": "data/entries/anatomy-of-a-screenplay.json",
+      "title": "Anatomy of a Screenplay — Movie Script Format Explained (And Why It Matters)",
+      "title_zh": "剧本的解剖：格式为什么这么严格，以及大师们怎么打破它",
+      "source_type": "视频",
+      "author": "StudioBinder",
+      "added": "2026-11-13",
+      "category": "影视与动画",
+      "tags": [
+        "编剧",
+        "剧本格式",
+        "电影制作",
+        "标准化",
+        "规则与打破",
+        "工作流程"
+      ],
+      "summary": "剧本是剧组的施工蓝图：格式如何被制片流程塑造、一页一分钟、彩虹剧本，以及大师们如何在格式里写出自己的声音。"
+    },
     {
       "id": "how-china-built-it",
       "file": "data/entries/how-china-built-it.json",
