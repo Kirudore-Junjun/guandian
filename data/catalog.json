@@ -1,7 +1,28 @@
 {
-  "version": 8,
-  "updated": "2026-11-10",
+  "version": 9,
+  "updated": "2026-11-13",
   "entries": [
+    {
+      "id": "musk-economist-interview",
+      "file": "data/entries/musk-economist-interview.json",
+      "title": "Interview with Elon Musk (The Economist)",
+      "title_zh": "《经济学人》专访马斯克：十年后的富足、AI 安全，以及一场关于欧洲的争吵",
+      "source_type": "视频访谈",
+      "author": "The Economist",
+      "added": "2026-11-13",
+      "category": "科技与社会",
+      "tags": [
+        "AI",
+        "马斯克",
+        "AI 安全",
+        "机器人",
+        "富足经济",
+        "工作的未来",
+        "访谈",
+        "政治争议"
+      ],
+      "summary": "十年后的富足、竞争者互审的 AI 安全提议、「工作像园艺」——以及一场关于欧洲的激烈交锋（双方说法均未核实）。"
+    },
     {
       "id": "liminal-ambient",
       "file": "data/entries/liminal-ambient.json",
