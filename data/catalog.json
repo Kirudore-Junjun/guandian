@@ -1,7 +1,28 @@
 {
-  "version": 9,
+  "version": 10,
   "updated": "2026-11-13",
   "entries": [
+    {
+      "id": "altman-tucker-interview",
+      "file": "data/entries/altman-tucker-interview.json",
+      "title": "Sam Altman on God, Elon Musk and the Mysterious Death of His Former Employee",
+      "title_zh": "Tucker Carlson 专访 Sam Altman：AI 的道德框架是谁定的？",
+      "source_type": "视频访谈",
+      "author": "Tucker Carlson",
+      "added": "2026-11-13",
+      "category": "科技与社会",
+      "tags": [
+        "AI",
+        "Sam Altman",
+        "AI 伦理",
+        "模型规范",
+        "隐私",
+        "宗教",
+        "访谈",
+        "OpenAI"
+      ],
+      "summary": "AI 的道德框架是谁定的？模型规范、「人类的加权平均」、AI 特权，以及「这显然是一种宗教」。"
+    },
     {
       "id": "musk-economist-interview",
       "file": "data/entries/musk-economist-interview.json",
