@@ -1,7 +1,26 @@
 {
-  "version": 15,
+  "version": 16,
   "updated": "2026-11-13",
   "entries": [
+    {
+      "id": "dialogue-that-doesnt-suck",
+      "file": "data/entries/dialogue-that-doesnt-suck.json",
+      "title": "How to Write Dialogue That Doesn't Suck",
+      "title_zh": "怎样写出不烂的对白：别写好句子，去听你的角色说话",
+      "source_type": "视频",
+      "author": "编剧技巧",
+      "added": "2026-11-13",
+      "category": "影视与动画",
+      "tags": [
+        "编剧",
+        "对白",
+        "人物塑造",
+        "说明性台词",
+        "写作方法",
+        "歌词"
+      ],
+      "summary": "好对白不是好句子：说明要服务角色、犹豫要有原因、闲聊可以推进故事、剧本需要转变性对白，以及「让角色接管，你只负责听」。"
+    },
     {
       "id": "anatomy-of-a-screenplay",
       "file": "data/entries/anatomy-of-a-screenplay.json",
