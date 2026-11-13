@@ -1,7 +1,28 @@
 {
-  "version": 13,
+  "version": 14,
   "updated": "2026-11-13",
   "entries": [
+    {
+      "id": "how-china-built-it",
+      "file": "data/entries/how-china-built-it.json",
+      "title": "How China Actually Built All of This",
+      "title_zh": "中国究竟是如何建成这一切的：一部关于激励的故事",
+      "source_type": "视频",
+      "author": "Johnny Harris",
+      "added": "2026-11-13",
+      "category": "政治与思想",
+      "tags": [
+        "中国",
+        "政治经济学",
+        "激励机制",
+        "党政体制",
+        "土地财政",
+        "基础设施",
+        "维稳",
+        "邓小平"
+      ],
+      "summary": "不是「独裁想建就建」，而是激励：干部考核、分灶吃饭、土地财政与维稳，如何造就了高铁与天际线，也造就了鬼城与拆迁。"
+    },
     {
       "id": "socialism-explained",
       "file": "data/entries/socialism-explained.json",
