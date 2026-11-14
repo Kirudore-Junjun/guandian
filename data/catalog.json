@@ -1,7 +1,28 @@
 {
-  "version": 17,
-  "updated": "2026-11-13",
+  "version": 18,
+  "updated": "2026-11-14",
   "entries": [
+    {
+      "id": "ishiguro-dua-lipa-klara",
+      "file": "data/entries/ishiguro-dua-lipa-klara.json",
+      "title": "Klara And The Sun: Dua Lipa & Kazuo Ishiguro On Technology, Loneliness & Hope",
+      "title_zh": "Dua Lipa 对话石黑一雄：《克拉拉与太阳》、灵魂、孤独，以及歌如何「缠住」一个人",
+      "source_type": "播客访谈",
+      "author": "Service95 Book Club",
+      "added": "2026-11-14",
+      "category": "幻想与文学",
+      "tags": [
+        "石黑一雄",
+        "克拉拉与太阳",
+        "AI",
+        "灵魂",
+        "孤独",
+        "爱",
+        "写歌",
+        "改编"
+      ],
+      "summary": "真正的担忧不是 AI 而是基因「提升」；灵魂还是一组倾向；点球大战般的孤独；关系而非人物；Tom Waits 如何改变《长日将尽》的结尾。"
+    },
     {
       "id": "great-dialogue-studiobinder",
       "file": "data/entries/great-dialogue-studiobinder.json",

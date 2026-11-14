@@ -213,7 +213,7 @@ function entry(id){
     <div style="font-family:var(--mono);font-size:11px;color:var(--ink3)"><span style="color:var(--accent)">${esc(e.category)}</span> · ${esc(s.type)} · ${esc(s.added)}</div>
     <h1>${esc(e.title_zh)}</h1>
     <div class="en">${esc(e.title)}</div>
-    <div class="src">${esc(s.channel||s.author)} · <a href="${esc(s.url)}" target="_blank" rel="noopener">原${esc(s.type)} ↗</a></div>
+    <div class="src">${esc(s.channel||s.author)}${s.url?` · <a href="${esc(s.url)}" target="_blank" rel="noopener">原${esc(s.type)} ↗</a>`:''}</div>
   </div>
   <div class="tldr"><b>一句话</b>${md(e.tldr)}</div>
   ${(e.golden_lines||[]).length?`<div class="gold">${e.golden_lines.map(g=>`<div>${esc(g)}</div>`).join('')}</div>`:''}
