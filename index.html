@@ -78,6 +78,30 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .tab.on{background:var(--accent);color:#fff}
 .tab small{font-family:var(--mono);font-size:10px;opacity:.7;margin-left:3px}
 
+.core{font-family:var(--serif);font-weight:700;font-size:20px;line-height:1.5;margin:14px 0 6px;color:var(--ink)}
+.more{font-size:13px;color:var(--accent);padding:4px 0;margin-bottom:6px}
+.fold{display:none}.fold.on{display:block}
+.it{background:var(--paper);border:1px solid var(--line);border-radius:12px;margin:8px 0;overflow:hidden}
+.it>summary{list-style:none;padding:12px 40px 12px 14px;cursor:pointer;position:relative}
+.it>summary::-webkit-details-marker{display:none}
+.it>summary::after{content:"+";position:absolute;right:14px;top:12px;font-family:var(--mono);color:var(--ink3)}
+.it[open]>summary::after{content:"–"}
+.it .lab2{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--ink3);display:block;margin-bottom:2px}
+.it .k{font-size:15.5px;line-height:1.55;color:var(--ink)}
+.it .t{font-family:var(--serif);font-weight:700;font-size:16px;line-height:1.45}
+.it .body{padding:0 14px 14px;font-size:15px;border-top:1px dashed var(--line);padding-top:12px}
+.it .body p{margin:0 0 10px}
+.it .body b{background:linear-gradient(transparent 62%,var(--accent-soft) 62%)}
+.it .str{font-size:13px;background:var(--chip);border-radius:8px;padding:7px 10px;margin-top:4px}
+.it .str::before{content:"评估 · ";font-family:var(--mono);font-size:11px;color:var(--ink3)}
+.it .eg{background:var(--chip);border-radius:8px;padding:8px 10px}
+.it .use{border-left:2px solid var(--accent);padding-left:10px}
+.it .lab{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;color:var(--ink3);display:block;margin-top:8px}
+.it .from{font-size:12px;color:var(--ink3);margin-top:8px}
+.it.rel .star{top:6px;right:34px}
+.srcbox{margin:24px 0 8px}
+.srcbox summary{font-size:13px;color:var(--ink3);cursor:pointer;list-style:none}
+.srcbox summary::-webkit-details-marker{display:none}
 .sec{background:var(--paper);border:1px solid var(--line);border-radius:14px;margin:12px 0;overflow:hidden}
 .sec>summary{list-style:none;padding:14px 16px;font-family:var(--serif);font-weight:700;font-size:16.5px;cursor:pointer;display:flex;justify-content:space-between;gap:10px}
 .sec>summary::-webkit-details-marker{display:none}
@@ -187,11 +211,9 @@ function home(){
   ${list.length?list.map(e=>`
     <a class="card" href="#e-${esc(e.id)}">
       ${read[e.id]?'<span class="readdot">已读</span>':''}
-      <div class="meta"><span class="cat">${esc(e.category)}</span><span>${esc(e.source_type)}</span><span>${esc(e.author)}</span><span>${esc(e.added)}</span></div>
+      <div class="meta"><span class="cat">${esc(e.category)}</span><span>${esc(e.added)}</span></div>
       <h2>${esc(e.title_zh)}</h2>
-      <div class="en">${esc(e.title)}</div>
-      <p>${esc(e.summary)}</p>
-      <div class="tags">${e.tags.map(t=>`<span class="tag">${esc(t)}</span>`).join('')}</div>
+      <p>${esc(e.one||e.summary)}</p>
     </a>`).join(''):'<div class="empty">没有匹配的内容</div>'}
   <div class="note">每周发来新内容后，这里会多出一篇；概念库和表达库会自动汇总所有篇目，内容多了以后再按主题重新分类。</div>`;
   const qi=document.getElementById('q');
@@ -212,43 +234,51 @@ function entry(id){
   <div class="ehead">
     <div style="font-family:var(--mono);font-size:11px;color:var(--ink3)"><span style="color:var(--accent)">${esc(e.category)}</span> · ${esc(s.type)} · ${esc(s.added)}</div>
     <h1>${esc(e.title_zh)}</h1>
-    <div class="en">${esc(e.title)}</div>
-    <div class="src">${esc(s.channel||s.author)}${s.url?` · <a href="${esc(s.url)}" target="_blank" rel="noopener">原${esc(s.type)} ↗</a>`:''}</div>
   </div>
-  <div class="tldr"><b>一句话</b>${md(e.tldr)}</div>
-  ${(e.golden_lines||[]).length?`<div class="gold">${e.golden_lines.map(g=>`<div>${esc(g)}</div>`).join('')}</div>`:''}
+  <div class="core">${esc(e.one||e.tldr)}</div>
+  ${e.one?`<button class="more" id="moreBtn">展开完整摘要 ›</button>
+  <div class="fold" id="moreBox"><div class="tldr">${md(e.tldr)}</div>
+  ${(e.golden_lines||[]).length?`<div class="gold">${e.golden_lines.map(g=>`<div>${esc(g)}</div>`).join('')}</div>`:''}</div>`:''}
   <div class="tabs">${TABS.map(([k,n])=>`<button class="tab ${tab===k?'on':''}" data-t="${k}">${n}<small>${(e[k]||[]).length}</small></button>`).join('')}</div>
   <div id="pane">${pane(e,tab)}</div>
-  ${s.note?`<div class="note">注：${esc(s.note)}</div>`:''}`;
-  app.querySelectorAll('[data-t]').forEach(b=>b.onclick=()=>{S.tab[id]=b.dataset.t;entry(id)});
+  <details class="srcbox"><summary>来源与说明 ›</summary>
+    <div class="note"><b>${esc(e.title)}</b><br>${esc(s.channel||s.author)}${s.url?` · <a href="${esc(s.url)}" target="_blank" rel="noopener">原${esc(s.type)} ↗</a>`:''}${s.note?'<br><br>'+esc(s.note).replace(/\n/g,'<br>'):''}</div>
+  </details>`;
+  app.querySelectorAll('[data-t]').forEach(b=>b.onclick=()=>{S.tab[id]=b.dataset.t;S.open=!!document.getElementById('moreBox')?.classList.contains('on');const y=scrollY;entry(id);scrollTo(0,y)});
+  const mb=document.getElementById('moreBtn');
+  if(mb){const box=document.getElementById('moreBox');if(S.open){box.classList.add('on');mb.textContent='收起摘要 ‹'}
+    mb.onclick=()=>{const on=box.classList.toggle('on');S.open=on;mb.textContent=on?'收起摘要 ‹':'展开完整摘要 ›'}}
   bindStars();
 }
 function pane(e,tab){
   const L=e[tab]||[];
-  if(tab==='handbook')return L.map((h,i)=>`<details class="sec" ${i<2?'open':''}><summary>${esc(h.heading)}</summary><div class="body">${paras(h.body)}</div></details>`).join('');
-  if(tab==='viewpoints')return L.map((v,i)=>`<div class="vp"><div class="n">观点 ${String(i+1).padStart(2,'0')}</div><h3>${esc(v.claim)}</h3><p>${md(v.support)}</p>${v.strength?`<div class="str">${esc(v.strength)}</div>`:''}</div>`).join('');
-  if(tab==='thinking')return L.map(t=>`<div class="vp qa"><div class="q">${esc(t.q)}</div><div class="body">${paras(t.a)}</div></div>`).join('');
-  if(tab==='derived')return L.map((d,i)=>`<details class="sec" ${i===0?'open':''}><summary>${esc(d.title)}</summary><div class="body">${paras(d.body)}</div></details>`).join('');
+  const it=(head,body)=>`<details class="it"><summary>${head}</summary><div class="body">${body}</div></details>`;
+  if(tab==='handbook')return L.map(h=>it(`<span class="lab2">${esc(h.heading)}</span><div class="k">${esc(h.key||h.heading)}</div>`,paras(h.body))).join('');
+  if(tab==='viewpoints')return L.map((v,i)=>it(`<span class="lab2">观点 ${String(i+1).padStart(2,'0')}</span><div class="t">${esc(v.claim)}</div>`,`<p>${md(v.support)}</p>${v.strength?`<div class="str">${esc(v.strength)}</div>`:''}`)).join('');
+  if(tab==='thinking')return L.map((t,i)=>it(`<span class="lab2">问题 ${i+1}</span><div class="t">${esc(t.q)}</div>`,paras(t.a))).join('');
+  if(tab==='derived')return L.map(d=>it(`<div class="t">${esc(d.title)}</div>`,paras(d.body))).join('');
   if(tab==='expression')return L.map((x,i)=>exCard({...x,_k:e.id+':'+i},false)).join('');
   if(tab==='concepts')return `<div class="cc">${L.map(c=>cpt(c,false)).join('')}</div>`;
   return '';
 }
 function exCard(x,showFrom){
   const st=store.get('stars',{});
-  return `<div class="ex rel">
+  return `<details class="it rel"><summary>
     <button class="star ${st[x._k]?'on':''}" data-s="${esc(x._k)}" aria-label="想练">${st[x._k]?'★':'☆'}</button>
-    <h3>${esc(x.technique)}</h3>
-    <div class="row"><span class="lab">原文怎么做</span><div class="eg">${md(x.example)}</div></div>
-    <div class="row"><span class="lab">为什么有效</span>${md(x.why)}</div>
-    <div class="row use"><span class="lab">我可以怎么用</span>${md(x.use)}</div>
+    <div class="t" style="padding-right:30px">${esc(x.technique)}</div>
+    ${showFrom?`<div class="from" style="margin-top:4px">${esc(x._t)}</div>`:''}
+  </summary><div class="body">
+    <span class="lab">我可以怎么用</span><div class="use">${md(x.use)}</div>
+    <span class="lab">原文怎么做</span><div class="eg">${md(x.example)}</div>
+    <span class="lab">为什么有效</span><div>${md(x.why)}</div>
     ${showFrom?`<div class="from">出自 · <a href="#e-${esc(x._id)}">${esc(x._t)}</a></div>`:''}
-  </div>`;
+  </div></details>`;
 }
 function cpt(c,showFrom){
-  return `<div class="cpt"><div class="nm">${esc(c.name)}</div><div class="en">${esc(c.en)}</div><div class="who">${esc(c.who)} · ${esc(c.year)}</div><div class="g">${esc(c.gist)}</div>${showFrom?`<div class="from">出自 · <a href="#e-${esc(c._id)}">${esc(c._t)}</a></div>`:''}</div>`;
+  return `<details class="it"><summary><div class="t">${esc(c.name)}</div><div class="k" style="font-size:14px;color:var(--ink2)">${esc(c.gist)}</div></summary><div class="body"><div class="en" style="font-style:italic;color:var(--ink3)">${esc(c.en)}</div><div style="font-size:13px;color:var(--ink2);margin-top:4px">${esc(c.who)} · ${esc(c.year)}</div>${showFrom?`<div class="from">出自 · <a href="#e-${esc(c._id)}">${esc(c._t)}</a></div>`:''}</div></details>`;
 }
 function bindStars(){
-  app.querySelectorAll('[data-s]').forEach(b=>b.onclick=ev=>{ev.preventDefault();const st=store.get('stars',{});const k=b.dataset.s;if(st[k])delete st[k];else st[k]=1;store.set('stars',st);b.classList.toggle('on',!!st[k]);b.textContent=st[k]?'★':'☆'});
+  app.querySelectorAll('[data-s]').forEach(b=>b.onclick=ev=>{ev.preventDefault();ev.stopPropagation();const st=store.get('stars',{});const k=b.dataset.s;if(st[k])delete st[k];else st[k]=1;store.set('stars',st);b.classList.toggle('on',!!st[k]);b.textContent=st[k]?'★':'☆'});
 }
 function concepts(){
   setNav('concepts');
