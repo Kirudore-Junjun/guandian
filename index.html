@@ -139,6 +139,20 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .cpt .who{font-size:12.5px;color:var(--ink2);margin:2px 0 4px;font-family:var(--mono)}
 .cpt .g{font-size:14px}
 .cpt .from{font-size:12px;color:var(--ink3);margin-top:4px}
+.cg{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.cn{border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:5px 11px;font-size:13.5px;line-height:1.3;color:var(--ink);font-family:inherit;cursor:pointer}
+.cn:active,.cn.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.sheetbg{position:fixed;inset:0;background:rgba(0,0,0,.28);z-index:50;opacity:0;pointer-events:none;transition:opacity .2s}
+.sheetbg.on{opacity:1;pointer-events:auto}
+.sheet{position:fixed;left:0;right:0;bottom:0;z-index:51;background:var(--paper);border-radius:18px 18px 0 0;padding:10px 20px calc(24px + env(safe-area-inset-bottom));max-height:70vh;overflow:auto;transform:translateY(105%);transition:transform .25s ease;box-shadow:0 -6px 30px rgba(0,0,0,.12)}
+.sheet.on{transform:none}
+.sheet .grab{width:40px;height:4px;border-radius:2px;background:var(--line);margin:0 auto 14px}
+.sheet .fld{font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:var(--accent)}
+.sheet .nm{font-family:var(--serif);font-weight:700;font-size:22px;margin:4px 0 2px}
+.sheet .en{font-size:13px;color:var(--ink3);font-style:italic}
+.sheet .g{font-size:16px;line-height:1.65;margin:12px 0}
+.sheet .who{font-size:13px;color:var(--ink2);font-family:var(--mono)}
+.sheet .from{font-size:13px;color:var(--ink3);margin-top:10px}
 .grp{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--accent);margin:22px 0 4px;text-transform:uppercase}
 .note{font-size:12.5px;color:var(--ink3);margin:16px 0;line-height:1.6}
 
@@ -248,7 +262,7 @@ function entry(id){
   const mb=document.getElementById('moreBtn');
   if(mb){const box=document.getElementById('moreBox');if(S.open){box.classList.add('on');mb.textContent='收起摘要 ‹'}
     mb.onclick=()=>{const on=box.classList.toggle('on');S.open=on;mb.textContent=on?'收起摘要 ‹':'展开完整摘要 ›'}}
-  bindStars();
+  bindStars();bindConcepts();
 }
 function pane(e,tab){
   const L=e[tab]||[];
@@ -258,7 +272,7 @@ function pane(e,tab){
   if(tab==='thinking')return L.map((t,i)=>it(`<span class="lab2">问题 ${i+1}</span><div class="t">${esc(t.q)}</div>`,paras(t.a))).join('');
   if(tab==='derived')return L.map(d=>it(`<div class="t">${esc(d.title)}</div>`,paras(d.body))).join('');
   if(tab==='expression')return L.map((x,i)=>exCard({...x,_k:e.id+':'+i},false)).join('');
-  if(tab==='concepts')return `<div class="cc">${L.map(c=>cpt(c,false)).join('')}</div>`;
+  if(tab==='concepts')return `<div class="cg">${L.map(c=>cpt(c,false)).join('')}</div><div class="note">点概念看解释</div>`;
   return '';
 }
 function exCard(x,showFrom){
@@ -275,8 +289,21 @@ function exCard(x,showFrom){
   </div></details>`;
 }
 function cpt(c,showFrom){
-  return `<details class="it"><summary><div class="t">${esc(c.name)}</div><div class="k" style="font-size:14px;color:var(--ink2)">${esc(c.gist)}</div></summary><div class="body"><div class="en" style="font-style:italic;color:var(--ink3)">${esc(c.en)}</div><div style="font-size:13px;color:var(--ink2);margin-top:4px">${esc(c.who)} · ${esc(c.year)}</div>${showFrom?`<div class="from">出自 · <a href="#e-${esc(c._id)}">${esc(c._t)}</a></div>`:''}</div></details>`;
+  const i=(S.cl=S.cl||[]).push({...c,_sf:showFrom})-1;
+  return `<button class="cn" data-ci="${i}">${esc(c.name)}</button>`;
 }
+function bindConcepts(){
+  app.querySelectorAll('[data-ci]').forEach(b=>b.onclick=()=>openSheet(S.cl[+b.dataset.ci],b));
+}
+function openSheet(c,btn){
+  let bg=document.getElementById('sbg'),sh=document.getElementById('sh');
+  if(!bg){bg=document.createElement('div');bg.id='sbg';bg.className='sheetbg';sh=document.createElement('div');sh.id='sh';sh.className='sheet';document.body.append(bg,sh);bg.onclick=closeSheet}
+  document.querySelectorAll('.cn.on').forEach(x=>x.classList.remove('on'));btn&&btn.classList.add('on');
+  sh.innerHTML=`<div class="grab"></div>${c.field?`<div class="fld">${esc(c.field)}</div>`:''}<div class="nm">${esc(c.name)}</div>${c.en&&c.en!==c.name?`<div class="en">${esc(c.en)}</div>`:''}<div class="g">${esc(c.gist)}</div><div class="who">${esc(c.who||'')}${c.year?' · '+esc(c.year):''}</div>${c._sf?`<div class="from">出自 · <a href="#e-${esc(c._id)}">${esc(c._t)}</a></div>`:''}`;
+  sh.querySelectorAll('a').forEach(a=>a.onclick=closeSheet);
+  requestAnimationFrame(()=>{bg.classList.add('on');sh.classList.add('on')});
+}
+function closeSheet(){const bg=document.getElementById('sbg'),sh=document.getElementById('sh');bg&&bg.classList.remove('on');sh&&sh.classList.remove('on');document.querySelectorAll('.cn.on').forEach(x=>x.classList.remove('on'))}
 function bindStars(){
   app.querySelectorAll('[data-s]').forEach(b=>b.onclick=ev=>{ev.preventDefault();ev.stopPropagation();const st=store.get('stars',{});const k=b.dataset.s;if(st[k])delete st[k];else st[k]=1;store.set('stars',st);b.classList.toggle('on',!!st[k]);b.textContent=st[k]?'★':'☆'});
 }
@@ -285,8 +312,9 @@ function concepts(){
   const cs=allConcepts();
   const by={};cs.forEach(c=>{(by[c.field]=by[c.field]||[]).push(c)});
   const fields=Object.keys(by).sort((a,b)=>by[b].length-by[a].length);
-  app.innerHTML=`<header class="mast"><div class="kicker">Concepts</div><h1>概念<span>库</span></h1><div class="stats">${cs.length} 个概念，按学科分组，跨篇目汇总</div></header>
-  ${fields.map(f=>`<div class="grp">${esc(f)} · ${by[f].length}</div><div class="cc">${by[f].map(c=>cpt(c,true)).join('')}</div>`).join('')}`;
+  app.innerHTML=`<header class="mast"><div class="kicker">Concepts</div><h1>概念<span>库</span></h1><div class="stats">${cs.length} 个概念，按学科分组 · 点一个看解释</div></header>
+  ${fields.map(f=>`<div class="grp">${esc(f)} · ${by[f].length}</div><div class="cg">${by[f].map(c=>cpt(c,true)).join('')}</div>`).join('')}`;
+  bindConcepts();
 }
 function craft(){
   setNav('craft');
@@ -303,7 +331,7 @@ function craft(){
 function route(){
   if(!S.catalog)return;
   const h=(location.hash||'').slice(1);
-  window.scrollTo(0,0);
+  window.scrollTo(0,0);S.cl=[];closeSheet();
   if(h.startsWith('e-'))entry(h.slice(2));
   else if(h==='concepts')concepts();
   else if(h==='craft')craft();
