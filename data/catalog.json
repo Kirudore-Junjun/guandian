@@ -1,7 +1,29 @@
 {
-  "version": 18,
-  "updated": "2026-11-14",
+  "version": 19,
+  "updated": "2026-11-24",
   "entries": [
+    {
+      "id": "musk-next-18-months",
+      "file": "data/entries/musk-next-18-months.json",
+      "title": "Elon Musk Just Laid Out the Next 18 Months (Full New Interview)",
+      "title_zh": "马斯克的下一个 18 个月：接住飞船、重写 Grok、拒绝摆拍的机器人，以及「算力军团」",
+      "source_type": "视频访谈",
+      "author": "Elon Musk / Gavin、Antonio",
+      "added": "2026-11-24",
+      "category": "科技与社会",
+      "tags": [
+        "马斯克",
+        "Starship",
+        "xAI / Grok",
+        "强化学习",
+        "Optimus",
+        "数据中心",
+        "Neuralink",
+        "AI 安全"
+      ],
+      "summary": "接住飞船的意义；从零重写 xAI 训练栈；错误标准答案让 RL「像酷刑」；不摆拍的 Optimus 与 Carmack 测试；Army X；Blindsight；求真的 AI。",
+      "one": "每样东西都要从地基重做：飞船要能整个接回来，训练栈要从零重写，机器人演示不能摆拍。"
+    },
     {
       "id": "ishiguro-dua-lipa-klara",
       "file": "data/entries/ishiguro-dua-lipa-klara.json",
