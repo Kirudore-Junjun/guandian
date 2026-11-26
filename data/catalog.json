@@ -1,7 +1,29 @@
 {
-  "version": 19,
-  "updated": "2026-11-24",
+  "version": 20,
+  "updated": "2026-11-26",
   "entries": [
+    {
+      "id": "dune-islam-religion",
+      "file": "data/entries/dune-islam-religion.json",
+      "title": "Dune, Islam & Religion",
+      "title_zh": "《沙丘》里的伊斯兰与宗教：马赫迪、想象界，以及宗教如何被用来控制人",
+      "source_type": "视频讲解",
+      "author": "Filip Holm",
+      "added": "2026-11-26",
+      "category": "幻想与文学",
+      "tags": [
+        "沙丘",
+        "伊斯兰",
+        "苏菲主义",
+        "弥赛亚",
+        "宗教史",
+        "Frank Herbert",
+        "世界观构建",
+        "宗教融合"
+      ],
+      "summary": "马赫迪与十二伊玛目；Lisan al-Gaib 的两层意思；苏菲的想象界与科尔班；伊本·赫勒敦；比吉斯特如何用宗教控制人。",
+      "one": "《沙丘》借用真实的伊斯兰与苏菲词汇，讲的是一个警告：救世主信仰可以被设计出来，用来控制一个民族。"
+    },
     {
       "id": "musk-next-18-months",
       "file": "data/entries/musk-next-18-months.json",
